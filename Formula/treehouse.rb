@@ -5,21 +5,21 @@
 class Treehouse < Formula
   desc "Isolated docker-compose stacks per git worktree"
   homepage "https://github.com/geocodio/treehouse"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Geocodio/treehouse/releases/download/v0.2.0/treehouse_darwin_amd64.tar.gz"
-      sha256 "2d7f8c787015c1c41e3c2de49e06297fe7c7e8f190aefd7ff133c27457629349"
+      url "https://github.com/Geocodio/treehouse/releases/download/v0.2.1/treehouse_darwin_amd64.tar.gz"
+      sha256 "09270d493d969d08d0b3016e7b6148083b751d6c713a2f3eef06cd33d172a995"
 
       define_method(:install) do
         bin.install "treehouse"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Geocodio/treehouse/releases/download/v0.2.0/treehouse_darwin_arm64.tar.gz"
-      sha256 "2cd8c691e3c969bd6b6932144e398d36107e80fd9190096dd2af5bd1c5ab9c9c"
+      url "https://github.com/Geocodio/treehouse/releases/download/v0.2.1/treehouse_darwin_arm64.tar.gz"
+      sha256 "8a250e0bff618fe4adf630f4c608d8a24f825cedd70f86dea171b7766e35c427"
 
       define_method(:install) do
         bin.install "treehouse"
@@ -29,15 +29,15 @@ class Treehouse < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Geocodio/treehouse/releases/download/v0.2.0/treehouse_linux_amd64.tar.gz"
-      sha256 "86bd8bd351ab8accf446547c6639216bed96824a8a56042dafae68f95a963f3a"
+      url "https://github.com/Geocodio/treehouse/releases/download/v0.2.1/treehouse_linux_amd64.tar.gz"
+      sha256 "e98af8892298413d64c23f6e96aa444419b8cd6c9cdea4a1dd431698344452e7"
       define_method(:install) do
         bin.install "treehouse"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Geocodio/treehouse/releases/download/v0.2.0/treehouse_linux_arm64.tar.gz"
-      sha256 "8b0d0d22fa10b515367c81e9ba4fef4e3da3b29d336caf77580124a390791ae1"
+      url "https://github.com/Geocodio/treehouse/releases/download/v0.2.1/treehouse_linux_arm64.tar.gz"
+      sha256 "3b0fb263d6c38255544417c768298d00285323b323b2e1ded7e31763dce47ddf"
       define_method(:install) do
         bin.install "treehouse"
       end
